@@ -62,11 +62,11 @@ return packer.startup(function(use)
 	}
 
   use {
-  'lewis6991/gitsigns.nvim',
-  config = function()
-    require('gitsigns').setup()
-  end
-}
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- colorschemes
 	use 'Mofiqul/dracula.nvim'
