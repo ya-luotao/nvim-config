@@ -10,7 +10,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- NERDTree
-keymap('n', '<C-n>', ':NERDTree<CR>', opts)
 keymap('n', '<C-t>', ':NERDTreeToggle<CR>', opts)
 keymap('n', '<C-f>', ':NERDTreeFind<CR>', opts)
 
@@ -22,9 +21,9 @@ keymap('n', '<leader>N', ':BufferMoveNext<CR>', opts)
 keymap('n', '<leader>x', ':BufferClose<CR>', opts)
 
 -- Telescope
-keymap('n', '<leader>f', ':Telescope find_files<CR>', opts)
-keymap('n', '<leader>g', ':Telescope live_grep<CR>', opts)
-keymap('n', '<leader>b', ':Telescope buffers<CR>', opts)
+keymap('n', '<leader>F', ':Telescope find_files<CR>', opts)
+keymap('n', '<leader>G', ':Telescope live_grep<CR>', opts)
+keymap('n', '<leader>B', ':Telescope buffers<CR>', opts)
 
 -- Resize
 keymap("n", "<leader>_", ":resize -2<CR>", opts)
