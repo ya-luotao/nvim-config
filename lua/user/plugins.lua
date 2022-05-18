@@ -17,10 +17,10 @@ end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
+augroup packer_user_config
+autocmd!
+autocmd BufWritePost plugins.lua source <afile> | PackerSync
+augroup end
 ]]
 
 local status_ok, packer = pcall(require, 'packer')
@@ -37,7 +37,7 @@ packer.init {
 }
 
 return packer.startup(function(use)
-	use 'wbthomason/packer.nvim'
+  use 'wbthomason/packer.nvim'
   use 'nvim-lua/plenary.nvim' -- required by telescope.nvim
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-lualine/lualine.nvim'
@@ -54,12 +54,12 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
 
-	use {
-		'numToStr/Comment.nvim',
-		config = function()
-			require('Comment').setup()
-		end
-	}
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   use {
     'lewis6991/gitsigns.nvim',
@@ -68,15 +68,8 @@ return packer.startup(function(use)
     end
   }
 
-  use {
-    'folke/which-key.nvim',
-    config = function()
-      require('which-key').setup {}
-    end
-  }
-
   -- colorschemes
-	use 'Mofiqul/dracula.nvim'
+  use 'Mofiqul/dracula.nvim'
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
